@@ -1,10 +1,5 @@
-> Ce repo doit être directement cloné dans votre répertoire apache (/var/www/html ou htdocs ou etc. )
-# PHP & MySQL
+> Ce repo doit être cloné
 
-PHP c'est bien mais avec une base de données c'est mieux. Nous allons mettre en situation
-une utilisation de PHP et MYSQL.
-Cette [ressource](https://openclassrooms.com/courses/concevez-votre-site-web-avec-php-et-mysql/presentation-des-bases-de-donnees-2) va vous éclairez sur les bases de données.
-Après avoir fait la partie "Écrire les données", vous pourrez commencer l'activité.
 
 # Objectif
 
@@ -33,12 +28,10 @@ Il faut insérer 5 randonnées. Chaque randonnée devra renseigner les champs :
 
 Dans le fichier *read.php*, récupérez les randonnées directement de la base données et affichez-les dans un tableau.
 
-Vous devez utiliser PHP bien sûr, mais aussi PDO.
+Vous devez utiliser PHP bien sûr, mais aussi Mysqli.
 
-> Rappel : un fichier PHP ne s'ouvre dans le navigateur en faisant un glisser déposer ! Ça ne va pas fonctionner !
-Vous devez absolument passer par votre serveur apache local : http://localhost/ ou http://localhost:8000/ ou etc.
 
-TIPS : l'utilisation de la méthode ```query()``` de PDO est un bon début *(dans ce cas là)*
+TIPS : l'utilisation de la méthode ```query()``` de Mysqli est un bon début *(dans ce cas là)*
 
 # Ajouter une randonnée
 
@@ -47,7 +40,7 @@ Vous devez maintenant ajouter une randonnée, mais pas par phpmyadmin, plutôt d
 Ça tombe bien, il y a la page *create.php*. Il y a déjà le formulaire. Vous devez récupérer les informations envoyées par ce formulaire et les enregistrer
 dans la base de données.
 
-TIPS : Vous pouvez jetter un oeil aux méthodes ```exec()``` ou ```prepare()``` et ```execute``` de PDO.
+TIPS : Vous pouvez jetter un oeil aux méthodes ```prepare()``` et ```execute``` de Mysqli.
 
 ## Améliorations
 
@@ -100,7 +93,7 @@ Protéger vos arrières en vérifiant que chaque informations envoyées par le f
 
 Vérifiez que les champs *distance*, *height_difference* et *duration* soient des chiffres uniquement.
 
-Si vous avez utiliser la méthode ```query()``` ou ```exec()``` avec des variables, il faudra les remplacer par ```prepare()``` et ```execute()```. Ces méthodes sont plus sécurisées quand il s'agit de travailler avec des variables envoyées par l'internaute.
+Si vous avez utiliser la méthode ```query()``` avec des variables, il faudra les remplacer par ```prepare()``` et ```execute()```. Ces méthodes sont plus sécurisées quand il s'agit de travailler avec des variables envoyées par l'internaute.
 
 *Il y a d'autres précautions à faire mais ça, ça sera pour une prochaine fois ;)*
 

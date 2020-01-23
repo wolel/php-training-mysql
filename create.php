@@ -6,8 +6,10 @@
 	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<a href="/php-pdo/read.php">Liste des données</a>
-	<h1>Ajouter</h1>
+<fieldset>
+    <legend>SITE DE RANDONNEES</legend>
+<a href="read.php">Liste des données</a>
+	<div id="ajouter"><h1>Ajouter</h1></div>
 	<form action="" method="post">
 		<div>
 			<label for="name">Name</label>
@@ -39,5 +41,6 @@
 		</div>
 		<button type="submit" name="button">Envoyer</button>
 	</form>
+</fieldset>
 </body>
 </html>

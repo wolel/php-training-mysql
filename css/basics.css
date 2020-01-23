@@ -1,5 +1,45 @@
+body{
+  font-family: "Open Sans",serif;
+  width: 50%;
+  height: auto;
+font-size: 20px;
+}
+fieldset{
+  border: 2px solid darkorange;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 50%;
+  height: 600px;
+  text-align: center;
+}
+legend{
+  font-size: 35px;
+  text-align: center;
+  color: orangered;
+  font-weight: bold;
+}
 label, select, input{
   width: 150px;
   display: inline-block;
   margin: 5px 0;
+}
+ul li{
+  font-size: 20px;
+}
+h1{
+  width: 80%;
+  background-color: orangered;
+  color: white;
+  padding: 25px;
+  font-size: 35px;
+
+
+}
+#ajouter{
+  text-align: center;
+  width: 100%;
 }

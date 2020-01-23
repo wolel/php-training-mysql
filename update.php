@@ -1,3 +1,28 @@
+<?php
+include ('server.php');
+$name = $_POST['name'];
+$difficulty = $_POST['difficulty'];
+$distance = $_POST['distance'];
+$duration = $_POST['duration'];
+$hd = $_POST['height_difference'];
+
+
+/* Exécute une requête préparée en passant un tableau de valeurs */
+$dbh ='';
+$sth = $dbh->prepare("SELECT * FROM hiking WHERE $name = :name and $difficulty = :difficulty and 
+$distance = :distance and $duration = :duration");
+
+
+$sth->execute(':name',':difficutly',':distance',':duration','height_difference');
+$ajouter = $sth->fetchAll();
+$sth->execute(array(175, 'jaune'));
+$yellow = $sth->fetchAll();
+
+
+
+$sql = "SELECT * FROM hiking WHERE $name = :name"
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +31,7 @@
 	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<a href="/php-pdo/read.php">Liste des données</a>
+	<a href="read.php">Liste des données</a>
 	<h1>Ajouter</h1>
 	<form action="" method="post">
 		<div>

@@ -1,3 +1,10 @@
+<?php
+$prepareRequete = PREPARE select_hiking
+FROM 'SELECT * FROM hiking WHERE name = ? AND difficulty = ? AND distance = ? AND duration = ? AND height_difference = ?';
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

@@ -34,8 +34,7 @@ function ajouter(){
     <h1>Liste des randonnées</h1>
     <table>
       <!-- Afficher la liste des randonnées -->
-        <?php echo liste_randonné()?>
-
+        <div><?php echo liste_randonné()?></div>
     </table>
   </body>
 </html>

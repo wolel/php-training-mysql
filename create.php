@@ -1,6 +1,21 @@
 <?php
-$prepareRequete = PREPARE select_hiking
-FROM 'SELECT * FROM hiking WHERE name = ? AND difficulty = ? AND distance = ? AND duration = ? AND height_difference = ?';
+MYSQL_STMT	*req_prep;
+
+$prepareRequete = PREPARE select_hiking;
+"FROM 'SELECT * FROM hiking WHERE name = ? AND difficulty = ? AND distance = ? AND duration = ? AND height_difference = ?'";
+
+// On prépare la requête
+if (mysql_stmt_prepare(req_prep, req_texte, strlen(req_texte)) != 0)
+{
+    printf("Impossible de préparer la requête");
+    exit(0);
+}
+
+if (mysql_stmt_execute(req_prep) != 0)
+{
+    printf("Impossible d'exécuter la requête");
+    exit(0);
+}
 
 ?>
 
